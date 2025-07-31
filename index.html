@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Booth</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="booth">
+
+      <!-- Preview with countdown -->
+      <div class="preview-block">
+        <div class="preview-container">
+          <video id="video" autoplay playsinline></video>
+          <div id="countdown" class="countdown"></div>
+        </div>
+
+        <!-- Controls outside preview overlay -->
+        <div class="controls">
+<select id="filter">
+  <option value="none">No Filter</option>
+  <option value="grayscale(100%)">Mono</option>
+  <option value="sepia(100%)">Sepia</option>
+  <option value="contrast(1.2) saturate(1.3) hue-rotate(10deg)">Retro Cool</option>
+  <option value="brightness(1.1) contrast(0.85) sepia(0.6)">Washed Film</option>
+  <option value="sepia(0.8) saturate(1.2) brightness(0.95)">Warm Vintage</option>
+  <option value="contrast(1.4) brightness(0.9) grayscale(0.2)">Dramatic</option>
+  <option value="hue-rotate(-10deg) saturate(1.4) brightness(1.1)">Blush</option>
+  <option value="grayscale(50%) contrast(1.2) sepia(0.3)">Old Camera</option>
+  <option value="contrast(0.9) brightness(1.3)">Bright Soft</option>
+  <option value="grayscale(30%) sepia(0.5) brightness(1.2)">Faded Summer</option>
+  <option value="contrast(1.5) saturate(0.6)">Matte Fade</option>
+  <option value="invert(1) hue-rotate(180deg)">Negative</option>
+  <option value="blur(1px) brightness(1.1) saturate(1.3)">Dreamy</option>
+  <option value="brightness(1.2) hue-rotate(20deg)">Golden Hour</option>
+  <option value="saturate(2.5) hue-rotate(-30deg)">Vibrant Pop</option>
+  <option value="contrast(0.8) brightness(1.4) saturate(0.7)">Soft Glow</option>
+  <option value="grayscale(100%) brightness(0.8)">Dark BW</option>
+  <option value="sepia(0.5) contrast(1.2)">Old School</option>
+  <option value="hue-rotate(90deg) brightness(1.1)">Electric Blue</option>
+  <option value="hue-rotate(200deg) saturate(1.5)">Midnight Pulse</option>
+  <option value="contrast(1.1) brightness(1.3)">Lemon Light</option>
+  <option value="saturate(0.4) contrast(1.5)">Muted Mood</option>
+  <option value="brightness(1.1) contrast(1.1) grayscale(0.3)">Retro Washed</option>
+  <option value="grayscale(80%) sepia(0.6)">Dusty Film</option>
+  <option value="saturate(0.8) brightness(1.3)">Misty Glow</option>
+  <option value="sepia(0.4) contrast(1.2) brightness(1.2)">Polaroid Fade</option>
+  <option value="contrast(1.3) brightness(0.85)">Rustic Tone</option>
+  <option value="hue-rotate(120deg) saturate(2)">Mint Shift</option>
+  <option value="contrast(1.2) grayscale(0.4)">Retro Fade</option>
+  <option value="brightness(1.25) saturate(1.3) hue-rotate(5deg)">Cozy Film</option>
+  <option value="sepia(0.7) brightness(1.1)">Warmth</option>
+  <option value="contrast(1.4) grayscale(0.7)">Muted BW</option>
+  <option value="invert(0.9) brightness(1.2)">Funky Film</option>
+  <option value="blur(2px) brightness(1.1)">Soft Blur</option>
+  <option value="saturate(1.7) brightness(0.9)">Crimson Pop</option>
+  <option value="contrast(1.1) hue-rotate(-15deg)">Cool Teal</option>
+  <option value="grayscale(60%) sepia(0.2) brightness(0.9)">Grunge</option>
+  <option value="contrast(0.7) brightness(1.5)">Pale Light</option>
+  <option value="sepia(0.9) hue-rotate(-5deg)">Antique</option>
+  <option value="saturate(2) brightness(1.3)">Summer Vibe</option>
+  <option value="brightness(0.9) contrast(1.6)">Bold Shadow</option>
+  <option value="contrast(1.3) grayscale(0.6)">Old Postcard</option>
+  <option value="grayscale(20%) sepia(0.3) brightness(1.3)">Peach Tone</option>
+  <option value="brightness(1.1) hue-rotate(45deg)">Coral Mist</option>
+  <option value="contrast(1.1) sepia(0.3) saturate(1.3)">Dusty Glow</option>
+  <option value="hue-rotate(150deg) brightness(1.1)">Mint Dream</option>
+  <option value="saturate(3) contrast(0.8)">Color Punch</option>
+  <option value="grayscale(0.9) contrast(1.2)">Film Noir</option>
+</select>
+
+          <button id="snap">Capture</button>
+        </div>
+      </div>
+
+      <!-- Captured photos -->
+      <div class="captures-section">
+        <div id="captures" class="captures"></div>
+        <button id="download" class="download" style="display: none;">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
