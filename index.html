@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Booth</title>
+  <link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+    <div class="booth">
+
+      <div class="preview-container">
+        <video id="video" autoplay playsinline></video>
+        <div id="countdown" class="countdown"></div>
+
+        <div class="controls">
+          <select id="filter">
+            <option value="none">No Filter</option>
+            <option value="grayscale(100%)">Mono</option>
+            <option value="sepia(100%)">Sepia</option>
+          </select>
+          <button id="snap">Take Picture</button>
+        </div>
+      </div>
+
+      <div class="captures-section">
+        <div id="captures" class="captures"></div>
+        <button id="download" class="download" style="display: none;">Save</button>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
